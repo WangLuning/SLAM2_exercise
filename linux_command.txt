@@ -1,0 +1,10 @@
+/mnt/c/Users/Administrator/Desktop/eigen_test/eigen_test
+https://www.codenong.com/cs106780898/
+
+g++ -I /usr/include/eigen3/ test_eigen.cpp
+g++ test_image.cpp -std=c++11 `pkg-config --cflags --libs opencv`
+g++ -I /usr/include/eigen3/ test_eigen.cpp `pkg-config --cflags --libs pango`
+g++ -I /usr/include/eigen3/ -I /usr/include/pangolin/ -std=c++11 `pkg-config --cflags --libs opencv` Source.cpp -l pangolin -lGL -lGLEW
+
+g++ Source.cpp -I /usr/include/eigen3/ -I /usr/include/DBoW3/ -l DBoW3 -std=c++11 `pkg-config --cflags --libs opencv`
+g++ -I /usr/include/eigen3/ -I /usr/include/ceres/ -std=c++14 `pkg-config --cflags --libs opencv` Source.cpp -l ceres
